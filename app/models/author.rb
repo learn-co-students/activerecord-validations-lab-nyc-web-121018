@@ -1,10 +1,8 @@
 class Author < ActiveRecord::Base
 
-validates :name, prescence: true
+validates :name, prescence: true, uniqueness: true
 
-validates :name, uniqueness: true
-
-validates :phone_number , length: {minimum: 10}
+validates :phone_number , length: { is: 10}
 
 
 end
